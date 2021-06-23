@@ -17,14 +17,13 @@ CMD ["node", "server.js"] <--- start server when running the container(CMD execu
 
 
 # Docker commands
-`docker build .`  <-- builds an image in the current directory
+___
 
-`docker run IMAGE_NAME` <-- runs an container based on image
-
-`docker run -p LOCAL_PORT:DOCKER_PORT IMAGE_NAME`
-
-`docker ps` <-- list running containers
-
-`docker ps -a` <-- list all containers
-
-`docker stop CONTAINER_NAME`
+| Command       | Description | 
+| ------------- |-------------| 
+| `docker build .` | builds an image in the current directory | 
+| `docker run IMAGE_NAME`    | runs a container based on given image  |  
+| `docker run -p LOCAL_PORT:DOCKER_PORT IMAGE_NAME` | runs a container based on given image and exposing DOCKER_PORT | 
+| `docker ps` | lists running containers |
+|`docker ps -a` | lists all containers |
+| `docker stop CONTAINER_NAME`| stops container with given name |
