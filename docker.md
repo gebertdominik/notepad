@@ -15,6 +15,18 @@ CMD ["node", "server.js"] <--- start server when running the container(CMD execu
 
 ```
 
+Each docker instruction is a separate layer. When we want rebuild an image, docker uses cached layers if they didn't change unless it finds a change. Once a layer is changed, all subsequent layers are executed again. It gives a room for optimisations - we'd like to executed some commands before the others to not execute it again. For example. we may want to replace
+```
+COPY . /app
+RUN npm install
+```
+with:
+``` 
+COPY package.json /app
+RUN npm install
+COPY . /app
+```
+to not execute npm install every time we made a code change.
 
 # Docker commands
 ___
@@ -27,3 +39,6 @@ ___
 | `docker ps` | lists running containers |
 |`docker ps -a` | lists all containers |
 | `docker stop CONTAINER_NAME`| stops container with given name |
+
+
+Each docker 
