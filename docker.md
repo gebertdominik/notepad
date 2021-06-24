@@ -41,4 +41,3 @@ ___
 | `docker stop CONTAINER_NAME`| stops container with given name |
 
 
-Each docker 
