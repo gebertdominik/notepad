@@ -41,3 +41,11 @@ ___
 | `docker stop CONTAINER_NAME`| stops container with given name |
 
 
+## Attached/detached mode
+
+`docker run` starts container in Attached mode by default, when `docker start` starts it in Detached mode by default
+In detached mode we are not following container logs, and we can execute commands in the same terminal session. It's opposite to the attached mode.
+
+We can change default behaviour by adding `-d` to `docker run` command, or `-a` to ` docker start`.
+
+The other way is to attach to the running container. It's possible by executing `docker attach CONTAINER`. Also, if we are interested in container logs only, it's possible to run `docker logs -f CONTAINER` to fetch container logs. `-f` flag is to follow incoming logs
