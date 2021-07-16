@@ -54,18 +54,18 @@ The other way is to attach to the running container. It's possible by executing 
 
 Attached mode means we are listening to the output of the container but we can not interact with the container(add input)
 
-flag -i (interactive), -t (tty) can help here
+flag `-i` (interactive), `-t` (tty) can help here
 
-When we're restaring container like that we need to add -a flag to attach the container and -i to run it in interactive mode. We don't need to put -t flag, bacause it's already memorized after executing it previously
-
-
+When we're restaring container like that we need to add `-a` flag to attach the container and `-i` to run it in interactive mode. We don't need to put `-t` flag, bacause it's already memorized after executing it previously
 
 ## DELETING IMAGES AND CONTAINERS
 
+`docker rm CONTAINER1 CONTAINER2 ...`
 
-docker rm CONTAINER1 CONTAINER2 ...
-docker rmi IMAGE1 IMAGE2 - container needs to be removed first. Even the stopped one
-docker prune -- remove all stopped containers at once
-docker image prune - remove all unused images
+`docker rmi IMAGE1 IMAGE2` - container needs to be removed first. Even the stopped one
 
-We can also run container based on docker image wirh --rm flag, to automatically remove the container when it stops
+`docker prune `- remove all stopped containers at once
+
+`docker image prune` - remove all unused images
+
+We can also run container based on docker image with `--rm` flag, to automatically remove the container when it stops
